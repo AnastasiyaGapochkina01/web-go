@@ -1,4 +1,4 @@
-def git_url = https://github.com/AnastasiyaGapochkina01/web-go.git
+def git_url = "https://github.com/AnastasiyaGapochkina01/web-go.git"
 pipeline {
   agent {
     docker {
