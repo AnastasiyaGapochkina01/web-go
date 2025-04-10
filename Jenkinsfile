@@ -9,6 +9,10 @@ pipeline {
     }
   }
 
+  parameters {
+    gitParameter (name: 'branch', type: 'PT_BRANCH', quickFilterEnabled: true)
+  }
+
   stages {
     stage('Checkout SCM') {
       steps {
