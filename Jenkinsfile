@@ -23,7 +23,7 @@ pipeline {
             archiveArtifacts artifacts: 'app.exe', fingerprint: true, onlyIfSuccessful: true
           }
         }
-        stage('Linux){
+        stage('Linux'){
           steps {
             sh "CGO_ENABLED=1 GOOS=linux GOARCG=amd64 go build -o app main.go"
             archiveArtifacts artifacts: 'app', fingerprint: true, onlyIfSuccessful: true
